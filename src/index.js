@@ -1,4 +1,10 @@
 import "./styles.css";
-import { hello } from "./js/components";
+import { TodoList } from "./classes";
+import { createTodoHtml } from "./js/components";
 
-hello("Sofia");
+export const todoList = new TodoList();
+console.log("todoList.todos=", todoList.todos);
+
+todoList.todos.forEach((element) => {
+    createTodoHtml(element);
+});
